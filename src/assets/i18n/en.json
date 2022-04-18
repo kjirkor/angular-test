@@ -1,0 +1,31 @@
+{
+	"appName": "Application name",
+    "username": "Username",
+	"emailAddress": "Email address",
+	"password": "Password",
+	"phone": "Phone",
+	"close": "Close",
+	"sendButton": "Send",	
+	"save": "Save",
+	"authorization": {
+        "logInTitle": "Log in",
+		"forgotPassword": "Forgotten password",
+		"logInButton": "Log in",
+		"logOutButton": "Log out",
+		"logInScreenInfo": "Information...",
+		"forgotPasswordTitle": "Forgotten password",
+		"errorBadCredentials": "Wrong username and/or password",
+		"confirmPassword": "Confirm password",
+		"changePasswordTitle": "Change password",
+		"successPasswordChange": "Successful password change",
+		"errorPasswordChange": "Unsuccessful password change",		
+		"successForgotPassword": "Password is sent to..."
+    },
+	"form": {
+		"required": "You must enter a value",
+		"format": "Invalid format",
+		"passwordPattern": "Password must have minimum of 8 characters and contain uppercase letter, lowercase letter and number",
+		"passwordsNoMatch": "Passwords do not match"
+	},
+	"error": "Еrror"
+}

@@ -1,0 +1,44 @@
+.form-layout {
+    min-width: 150px;
+    max-width: 400px;
+    margin: auto;
+    padding: 0px 15px
+}
+
+.full-width {
+    width: 100%;
+}
+
+.divider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.flex-row {
+    display: flex;
+    width: 100%;
+}
+
+.spacer {
+    flex: 1 1;
+}
+
+.info {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.space-top {
+    margin-top: 15vh;
+}
+
+.title {
+    font-size: 2em;
+    margin: 20px 0px
+}
+
+.loading {
+    margin: auto;
+    margin-top: 10px;
+}

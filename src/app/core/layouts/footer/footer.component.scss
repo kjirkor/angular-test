@@ -1,0 +1,25 @@
+footer {
+    background: #262626;
+    color: #949494;
+    padding: 10px;
+}
+
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        color: #949494;
+        font-weight: normal !important;
+        &:hover {
+            color: #cccccc;
+            -webkit-transition: all 0.2s ease-in-out;
+            -khtml-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -ie-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+}

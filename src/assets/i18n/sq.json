@@ -1,0 +1,31 @@
+{
+	"appName": "Emri i aplikacionit",
+    "username": "Emri i përdoruesit",
+	"emailAddress": "Email adresa",
+	"password": "Fjalëkalimi",
+	"phone": "Telefoni",
+	"close": "Mbylle",
+	"sendButton": "Dërgo",
+	"save": "Ruaj",
+	"authorization": {
+        "logInTitle": "Kyçu",
+		"forgotPassword": "Ke harruar fjalëkalimin",
+		"logInButton": "Kyçu",
+		"logOutButton": "Shkyçu",
+		"logInScreenInfo": "Informacion...",
+		"forgotPasswordTitle": "Ke harruar fjalëkalimin",
+		"errorBadCredentials": "Emri i përdoriesit ose/dhe fjalëkalimi i gabuar",
+		"confirmPassword": "Konfirmo fjalëkalimin",
+		"changePasswordTitle": "Ndrysho fjalëkalimin",
+		"successPasswordChange": "Fjalëkalimi u ndryshua me sukses",
+		"errorPasswordChange": "Ndryshimi i fjalëkalimit i pasuksesshëm",
+		"successForgotPassword": "Fjalëkalimi u dërgua në..."
+    },
+	"form": {
+		"required": "Fusha është e detyrueshme",
+		"format": "Format i pavlevshëm",
+		"passwordPattern": "Fjalëkalimi duhet patjetër të ketë minimum 8 karaktere dhe të përmbajë shkronjë të madhe, të vogël dhe numër",
+		"passwordsNoMatch": "Fjalëkalimi nuk përputhet"
+	},
+	"error": "Gabim"
+}

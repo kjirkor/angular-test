@@ -1,0 +1,31 @@
+{
+	"appName": "Име на апликација",
+	"username": "Корисничко име",
+	"emailAddress": "Е-маил адреса",
+	"password": "Лозинка",
+	"phone": "Телефонски број",
+	"close": "Затвори",
+	"sendButton": "Испрати",
+	"save": "Зачувај",
+	"authorization": {
+		"logInTitle": "Најави се",
+		"forgotPassword": "Заборавена лозинка",
+		"logInButton": "Најави се",
+		"logOutButton": "Одјави се",
+		"logInScreenInfo": "Информација...",
+		"forgotPasswordTitle": "Заборавена лозинка",
+		"errorBadCredentials": "Погрешно корисничко име или лозинка.",
+		"confirmPassword": "Потврди лозинка",		
+		"changePasswordTitle": "Промени лозинка",
+		"successPasswordChange": "Успешна промена на лозинка",
+		"errorPasswordChange": "Неуспешна промена на лозинка",		
+		"successForgotPassword": "Лозинката е испратена на..."
+	},
+	"form": {
+		"required": "Полето е задолжително",
+		"format": "Невалиден формат",
+		"passwordPattern": "Лозинката мора да има минимум 8 карактери и да содржи голема латинична буква, мала латинична буква и број",
+		"passwordsNoMatch": "Лозинките не се совпаѓаат"
+	},
+	"error": "Настана грешка"
+}

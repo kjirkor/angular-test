@@ -1,0 +1,128 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$mat-t-magenta: (50: #fce0ee,
+    100: #f6b3d5,
+    200: #f180ba,
+    300: #eb4d9e,
+    400: #e62689,
+    500: #e20074,
+    600: #df006c,
+    700: #da0061,
+    800: #d60057,
+    900: #cf0044,
+    A100: #fff6f9,
+    A200: #ffc3d3,
+    A400: #ff90ad,
+    A700: #ff779a,
+    contrast: (50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #ffffff,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #ffffff,
+        A400: #ffffff,
+        A700: #ffffff,
+    ));
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$telekom-angular-template-primary: mat.define-palette($mat-t-magenta);
+$telekom-angular-template-accent: mat.define-palette($mat-t-magenta, A200, A100, A400);
+
+// The wargb(108, 223, 0)tte is optional (defaults to red).
+$telekom-angular-template-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$telekom-angular-template-theme: mat.define-light-theme((
+  color: (
+    primary: $telekom-angular-template-primary,
+    accent: $telekom-angular-template-accent,
+    warn: $telekom-angular-template-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($telekom-angular-template-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+.layout {
+  // XS
+  margin-left: 12px;
+  margin-right: 12px;
+  
+  // L
+  @media screen and (min-width: 960px){
+      max-width: 900px;
+      margin: auto;
+  }
+  
+  // XL
+  @media screen and (min-width: 1140px){
+      max-width: 1000px;
+  }
+}
+
+@font-face {
+  font-family: 'TeleGroteskNext';
+  src: url("assets/fonts/telegrotesknext-regular.woff") format("woff"),
+      url("assets/fonts/telegrotesknext-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TeleGroteskNext';
+  src: url("assets/fonts/telegrotesknext-regularitalic.woff") format("woff"),
+      url("assets/fonts/telegrotesknext-regularitalic.woff2") format("woff2");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TeleGroteskNext';
+  src: url("assets/fonts/telegrotesknext-bold.woff") format("woff"),
+      url("assets/fonts/telegrotesknext-bold.woff2") format("woff2");
+  font-weight: bold;
+}
+
+
+@font-face {
+  font-family: 'TeleGroteskNext';
+  src: url("assets/fonts/telegrotesknext-bolditalic.woff") format("woff"),
+      url("assets/fonts/telegrotesknext-bolditalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+* {
+  font-family: TelegroteskNext, Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+a {
+  color: #00739f;
+  text-decoration: none;
+}
+
+html, body { height: 100%; }
+body { margin: 0; }

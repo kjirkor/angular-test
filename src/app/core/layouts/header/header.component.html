@@ -1,0 +1,24 @@
+<header>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <div class="layout header-layout">
+                <img class="logo" src="assets/images/logo.svg" alt="logo">
+                <span class="spacer"></span>
+                <img class="logo" src="assets/images/slogan.svg" alt="slogan">
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-toolbar class="subheader">
+        <div class="layout subheader-layout">
+            <span class="app-title">{{ 'appName' | translate }}</span>
+    
+            <span class="spacer"></span>
+            <button mat-button [matMenuTriggerFor]="menu">{{selectedLanguage}}</button>
+        </div>
+    </mat-toolbar>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="useLanguage('mk')">MK</button>
+        <button mat-menu-item (click)="useLanguage('sq')">SQ</button>
+        <button mat-menu-item (click)="useLanguage('en')">EN</button>
+    </mat-menu>
+</header>

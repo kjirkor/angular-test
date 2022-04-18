@@ -1,0 +1,109 @@
+table {
+    width: 100%;
+  }
+
+  .layout {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .history-title {
+    text-align: center;
+    position: relative;
+    padding: 1em;
+  
+    .btn-download{
+      position: absolute;
+      top: 15px;
+      right: 25px;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .btn-download{
+      position: relative !important;
+      top: 0 !important;
+      right: 0 !important;
+    }
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 10%;
+  }
+  
+  .mat-elevation-z8 {
+    overflow-x: auto;
+  }
+  
+  .mat-table.mat-table {
+    min-width: 900px;
+  }
+  
+  .btn-cancel {
+    color: #dc3545;
+    cursor: pointer;
+    margin: 10px 2px;
+  }
+  
+  .btn-check {
+    color: #28a745;
+    cursor: pointer;
+    margin: 10px 2px;
+  }
+  
+  .btn-edit {
+    cursor: pointer;
+    margin: 10px 2px;
+  }
+  
+  .actions-div {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+  
+    button {
+      margin: 0 0.3em;
+    }
+  }
+  
+  .table-head {
+    padding: 8px 24px 0px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+  
+    h3 {
+      padding: 0.5em;
+    }
+  }
+  
+  .table-s {
+    width: 100%;
+  }
+  
+  .menu-icon {
+    color: #e20074;
+    margin-right: 10px;
+  }
+  
+  @media screen and (min-width: 700px) {
+    .m-right-1-sm-top-1 {
+      margin-right: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .m-right-1-sm-top-1 {
+      margin: 1rem;
+    }
+  }

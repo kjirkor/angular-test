@@ -1,0 +1,34 @@
+<div class="space-top">
+    <h1 class="title">{{'authorization.logInTitle' | translate}}</h1>
+    <form (ngSubmit)="onSubmit()" #logInForm="ngForm" class="form-layout">
+        <mat-form-field class="full-width">
+            <input [(ngModel)]="model.username" name="username" [placeholder]="'username' | translate"
+                class="form-control" #username="ngModel" pattern="^[a-zA-Z0-9-._]*$" (keypress)="usernameAllowedChars($event)" required matInput [disabled]="loading">
+            <mat-error *ngIf="username.invalid && (username.dirty || username.touched)">
+                <span *ngIf="username.errors && username.errors['required']">{{'form.required' | translate}}</span>
+                <span *ngIf="username.errors && username.errors['pattern']">{{'form.format' | translate}}</span>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <input matInput [placeholder]="'password' | translate" type="password" class="form-control"
+                [(ngModel)]="model.password" #password="ngModel" name="password" required [disabled]="loading">
+            <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+                <span *ngIf="password.errors && password.errors['required']">{{'form.required' | translate}}</span>
+            </mat-error>
+        </mat-form-field>
+
+        <div class="flex-row">
+            <img class="info" src="assets/images/information.png" (click)="openInfoDialog()" alt="information">
+            <span class="spacer"></span>
+            <a routerLink="/auth/forgot-password"> {{ 'authorization.forgotPassword' | translate }} </a>
+        </div>
+
+        <mat-divider class="divider"></mat-divider>
+        <div>
+            <button [disabled]="!logInForm.form.valid || loading" type="submit" mat-raised-button
+                color="primary">{{ 'authorization.logInButton' | translate }}</button>
+            <mat-spinner *ngIf="loading" class="loading" diameter="30"></mat-spinner>
+        </div>
+    </form>
+</div>
