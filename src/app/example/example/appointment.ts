@@ -1,4 +1,4 @@
-export class Appointments {
+export class Appointment {
     Id: number;
     Name: string;
     TimeFrom: string;
