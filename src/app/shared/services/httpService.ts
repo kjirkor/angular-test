@@ -1,12 +1,13 @@
-import { inject, Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-import { Appointment } from '../example/example/appointments';
+import { Injectable } from '@angular/core';
+import { Appointment } from '../../core/models/appointment';
+
 
 @Injectable({
-    providedIn: 'root'
-})
+    providedIn: 'root',
+  })
 
 export class HttpService{
     
@@ -21,11 +22,13 @@ export class HttpService{
     };
 
     getAppointments() : Observable<Appointment>{   
-        return this.http.get<Appointment>(this.apiBaseUrl + "/appointments")
-        .pipe(retry(1), catchError(this.handleError));
+        
+        let result =  this.http.get<Appointment>(this.apiBaseUrl + "/appointments");      
+        
+        return result;
     }
 
-    getAppointment(id: number): Appointment {
+    getAppointment(id: number): Observable<Appointment> {
         return this.http.get<Appointment>(this.apiBaseUrl + "/appointments/"+id)
         .pipe(retry(1), catchError(this.handleError));
     }
@@ -45,7 +48,7 @@ export class HttpService{
 
     handleError(error: any){
         let errorMessage = '';
-
+        window.alert("handleError")
         if(error.error instanceof ErrorEvent){
              errorMessage = error.error.message;
         }else{

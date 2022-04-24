@@ -29,6 +29,34 @@
   
   <p>Одбравте: {{selected}}</p>
 
+  <div class="container custom-container-2">  
+    <div class="no-data text-center" *ngIf="appointments.length == 0">
+      <p>Нема внесени термини</p>     
+    </div>
+    <div *ngIf="appointments.length !== 0">
+      <h3 class="mb-3 text-center">Внесени Термини</h3>
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">TimeFrom</th>
+              <th scope="col">TimeTo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let appointment of appointments">
+              <td>{{ appointment.Id }}</td>
+              <td>{{ appointment.Name }}</td>
+              <td>{{ appointment.TimeFrom }}</td>
+              <td>{{ appointment.TimeTo }}</td>         
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
   </form>   
 </div>
   

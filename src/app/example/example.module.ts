@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { HttpClientModule } from '@angular/common/http'
 import { ExampleRoutingModule } from './example-routing.module';
 import { ExampleComponent } from './example/example.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -24,7 +24,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatSelectModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ]
 })
 export class ExampleModule { }
