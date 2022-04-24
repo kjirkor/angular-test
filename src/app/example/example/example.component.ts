@@ -9,7 +9,7 @@ import { HttpService } from '../../../app/shared/services/httpService'
 
 export class ExampleComponent implements OnInit {
   appointments: any = [];
-  selected = 'термин1';
+  selected = '';
   
 
   constructor(public httpService: HttpService) { }
@@ -25,4 +25,12 @@ export class ExampleComponent implements OnInit {
     });
   }
 
+  addAppointment(): void{
+    let appointment = this.appointments[0];
+    this.httpService.addAppointment(appointment)
+    .subscribe( () =>
+    {
+        window.alert("Успешно додаддено");      
+    });    
+  }
 }

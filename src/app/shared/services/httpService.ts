@@ -21,16 +21,21 @@ export class HttpService{
         })
     };
 
-    getAppointments() : Observable<Appointment>{   
-        
-        let result =  this.http.get<Appointment>(this.apiBaseUrl + "/appointments");      
-        
-        return result;
+    getAppointments() : Observable<Appointment>{  
+        return this.http.get<Appointment>(this.apiBaseUrl + "/appointments")
+        .pipe(retry(1), catchError(this.handleError));    
     }
 
     getAppointment(id: number): Observable<Appointment> {
         return this.http.get<Appointment>(this.apiBaseUrl + "/appointments/"+id)
         .pipe(retry(1), catchError(this.handleError));
+    }
+
+    addAppointment(appointment: Appointment ) : Observable<Appointment>{
+        return this.http.post<Appointment>(this.apiBaseUrl + "/appointments" ,
+        JSON.stringify(appointment),
+        this.httpOptions)
+        .pipe(retry(1), catchError(this.handleError));        
     }
 
     updateAppointment(id: number, appointment: Appointment ) : Observable<Appointment>{
@@ -48,7 +53,7 @@ export class HttpService{
 
     handleError(error: any){
         let errorMessage = '';
-        window.alert("handleError")
+        
         if(error.error instanceof ErrorEvent){
              errorMessage = error.error.message;
         }else{
