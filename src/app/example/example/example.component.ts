@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { Appointment } from 'src/app/core/models/appointment';
 import { HttpService } from '../../../app/shared/services/httpService'
 
@@ -12,8 +11,7 @@ import { HttpService } from '../../../app/shared/services/httpService'
 export class ExampleComponent implements OnInit {
   appointments : Appointment[] = [];
   selectedAppointmentId = '';
-  picker : any;
-  
+  displayedColumns : string[] = ['Id','Name','TimeFrom','TimeTo'];
 
   constructor(public httpService: HttpService) { }
 
@@ -23,7 +21,7 @@ export class ExampleComponent implements OnInit {
 
   loadData(){
     this.httpService.getAppointments()
-    .subscribe( data => {
+    .subscribe( (data: Appointment[]) => {
       this.appointments = data;
     });
   }
@@ -33,9 +31,7 @@ export class ExampleComponent implements OnInit {
     this.httpService.addAppointment(appointment)
     .subscribe( () =>
     {
-        window.alert("Успешно додаддено");      
-    });    
-
-    window.alert(this.picker);
+      window.alert("Успешно додаддено");    
+    });   
   }
 }
