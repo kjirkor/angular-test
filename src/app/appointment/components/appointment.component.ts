@@ -3,12 +3,12 @@ import { Appointment } from 'src/app/core/models/appointment';
 import { HttpService } from '../../../app/shared/services/httpService'
 
 @Component({
-  selector: 'app-example',
-  templateUrl: './example.component.html',
-  styleUrls: ['./example.component.scss']
+  selector: 'app-appointment',
+  templateUrl: './appointment.component.html',
+  styleUrls: ['./appointment.component.scss']
 })
 
-export class ExampleComponent implements OnInit {
+export class AppointmentComponent implements OnInit {
   appointments : Appointment[] = [];
   selectedAppointmentId = '';
   displayedColumns : string[] = ['Id','Name','TimeFrom','TimeTo'];
