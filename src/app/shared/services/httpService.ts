@@ -21,8 +21,8 @@ export class HttpService{
         })
     };
 
-    getAppointments() : Observable<Appointment>{  
-        return this.http.get<Appointment>(this.apiBaseUrl + "/appointments")
+    getAppointments() : Observable<Appointment[]>{  
+        return this.http.get<Appointment[]>(this.apiBaseUrl + "/appointments")
         .pipe(retry(1), catchError(this.handleError));    
     }
 

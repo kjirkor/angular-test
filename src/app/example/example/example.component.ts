@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Appointment } from 'src/app/core/models/appointment';
 import { HttpService } from '../../../app/shared/services/httpService'
 
 @Component({
@@ -8,8 +10,9 @@ import { HttpService } from '../../../app/shared/services/httpService'
 })
 
 export class ExampleComponent implements OnInit {
-  appointments: any = [];
-  selected = '';
+  appointments : Appointment[] = [];
+  selectedAppointmentId = '';
+  picker : any;
   
 
   constructor(public httpService: HttpService) { }
@@ -32,5 +35,7 @@ export class ExampleComponent implements OnInit {
     {
         window.alert("Успешно додаддено");      
     });    
+
+    window.alert(this.picker);
   }
 }
