@@ -26,7 +26,7 @@ export class ChangePasswordComponent implements OnInit {
     .subscribe({
         next: (res) => {
           this.loading = false
-          this.router.navigate(['/example'])          
+          this.router.navigate(['/appointment'])          
           this.snackbarService.showSnackbar("authorization.successPasswordChange")
         },
         error: (error) => {

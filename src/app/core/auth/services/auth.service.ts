@@ -57,7 +57,7 @@ export class AuthService {
   }
 
   getUserRoles(){
-    return ['example_role'];
+    return ['appointment_role'];
   }
 
   refreshToken() {

@@ -26,11 +26,11 @@ const routes: Routes = [
     ]
   },
   { 
-    path: 'example', 
+    path: 'appointment', 
     component: MainLayoutComponent, 
-    loadChildren: () => import('./example/example.module').then(m => m.ExampleModule),
+    loadChildren: () => import('./appointment/appointment.module').then(m => m.appointmentModule),
     canActivate: [AuthGuardService],
-    data: { roles: ['example_role'] }
+    data: { roles: ['appointment_role'] }
   },
   { path: '**', redirectTo: '/auth/log-in', pathMatch: 'full' } //catch-all route
 ];

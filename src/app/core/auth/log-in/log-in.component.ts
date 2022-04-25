@@ -53,7 +53,7 @@ export class LogInComponent implements OnInit {
     this.authService.logIn(this.model.username, this.model.password)
       .subscribe(resp => {
         this.loading = false;
-        this.router.navigate(['/example'])
+        this.router.navigate(['/appointment'])
       },
         (error: HttpErrorResponse) => {
           this.loading = false;

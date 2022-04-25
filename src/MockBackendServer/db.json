@@ -1,0 +1,34 @@
+{
+    "appointments" : [
+        {
+            "Id": 1,
+            "Name" : "Термин 1",
+            "TimeFrom" :"06:00",
+            "TimeTo" : "08:00"
+        },
+        {
+            "Id": 2,
+            "Name" : "Термин 2",
+            "TimeFrom" :"16:00",
+            "TimeTo" : "17:30"
+        },
+        {
+            "Id": 3,
+            "Name" : "Термин 3",
+            "TimeFrom" :"17:30",
+            "TimeTo" : "19:00"
+        },
+        {
+            "Id": 4,
+            "Name" : "Tермин 4",
+            "TimeFrom" :"19:00",
+            "TimeTo" : "20:30"
+        },
+        {
+            "Id": 5,
+            "Name" : "Tермин 5",
+            "TimeFrom" :"21:00",
+            "TimeTo" : "22:30"
+        }
+    ]
+}
