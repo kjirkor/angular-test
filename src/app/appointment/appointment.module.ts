@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { ExampleRoutingModule } from './example-routing.module';
-import { ExampleComponent } from './example/example.component';
+import { HttpClientModule } from '@angular/common/http'
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -11,12 +9,15 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
+import { appointmentRoutingModule } from './appointment-routing.module';
+import { AppointmentComponent } from './components/appointment.component';
+
 
 @NgModule({
-  declarations: [ExampleComponent],
+  declarations: [AppointmentComponent],
   imports: [
     CommonModule,
-    ExampleRoutingModule,
+    appointmentRoutingModule,
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
@@ -24,7 +25,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatSelectModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ]
 })
-export class ExampleModule { }
+export class appointmentModule { }
